@@ -1,0 +1,36 @@
+@import '../index.scss';
+
+.bill-container {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+
+    .label {
+        margin-bottom: 6px;
+        font-size: 16px;
+        color: var(--dark-grayish-cyan);
+    }
+
+    .bill-input {
+        display: flex;
+        align-items: center;
+        width: auto;
+        height: 48px;
+        background-color: var(--very-light-graying-cyan);
+
+        .dollar-img {
+            padding-left: 19.26px;
+        }
+
+        #bill {
+            width: 100%;
+            border-style: none;
+            background-color: var(--very-light-graying-cyan);
+            color: var(--very-dark-cyan);
+            font-family: 'Space Mono', sans-serif;
+            font-size: 24px;
+            text-align: right;
+            padding-right: 17.48px;
+        }
+    }
+}
