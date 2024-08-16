@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
 function ResetButton({ onClick }) {
     return (
         <button
-            className="reset-btn"
+            className='reset-btn'
             onClick={onClick}
         >
             Reset

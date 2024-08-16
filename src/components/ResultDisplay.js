@@ -2,7 +2,7 @@ import React from 'react';
 
 function ResultDisplay({ tipAmount, totalPerPerson }) {
     return (
-        <div className="result-container">
+        <div className='result-container'>
             <div>
                 <div>
                     <h3>Tip Amount</h3>

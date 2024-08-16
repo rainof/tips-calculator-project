@@ -15,9 +15,9 @@ function TipSelector({ selectedTip, onChange, customTip, onCustomTipChange }) {
     };
 
     return (
-        <div className="tip-container">
+        <div className='tip-container'>
             <label>Select Tip %</label>
-            <div className="tip-btn">
+            <div className='tip-btn'>
                 {tipOptions.map((tip) => (
                     <button
                         key={tip}
@@ -28,10 +28,10 @@ function TipSelector({ selectedTip, onChange, customTip, onCustomTipChange }) {
                     </button>
                 ))}
                 <input
-                    type="number"
+                    type='number'
                     value={customTip}
                     onChange={handleCustomTip}
-                    placeholder="Custom"
+                    placeholder='Custom'
                 />
             </div>
         </div>

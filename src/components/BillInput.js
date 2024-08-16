@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function BillInput({ value, onChange }) {
     const [isPlaceHolderVisible, setIsPlaceHolderVisible] = useState(true);
 
     const handleFocus = () => {
         if (value === 0 && isPlaceHolderVisible) {
-            onChange('');
+            onChange("");
             setIsPlaceHolderVisible(false);
         }
     }
 
     const handleBlur = () => {
-        if (value === '') {
+        if (value === "") {
             onChange(0);
             setIsPlaceHolderVisible(true);
         }
@@ -26,7 +26,7 @@ function BillInput({ value, onChange }) {
                 value={value}
                 onFocus={handleFocus}
                 onBlur={handleBlur}
-                onChange={(e) => onChange(parseFloat(e.target.value) || '')}
+                onChange={(e) => onChange(parseFloat(e.target.value) || "")}
                 placeholder="0"
             />
         </div>

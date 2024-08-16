@@ -1,4 +1,5 @@
 import './App.scss';
+import logo from './assets/images/logo.svg';
 import React, { useState } from 'react';
 import BillInput from './components/BillInput';
 import TipSelector from './components/TipSelector';
@@ -14,7 +15,7 @@ function App() {
 
   const handleReset = () => {
     setBill('');
-    setTipPercentage('');
+    setTipPercentage(0);
     setPeople('');
     setCustomTip('');
   }
@@ -31,28 +32,33 @@ function App() {
   const { tipAmount, totalPerPerson } = calculateTip();
 
   return (
-    <div className="App">
-      <BillInput
-        value={bill}
-        onChange={setBill}
-      />
-      <TipSelector
-        selectedTip={tipPercentage}
-        onChange={setTipPercentage}
-        customTip={customTip}
-        onCustomTipChange={setCustomTip}
-      />
-      <PeopleInput
-        value={people}
-        onChange={setPeople}
-      />
-      <ResultDisplay
-        tipAmount={tipAmount}
-        totalPerPerson={totalPerPerson}
-      />
-      <ResetButton
-        onClick={handleReset}
-      />
+    <div className='App'>
+      <div className='logo-container'>
+        <img src={logo} alt='logo' />
+      </div>
+      <div className='calculator-container'>
+        <BillInput
+          value={bill}
+          onChange={setBill}
+        />
+        <TipSelector
+          selectedTip={tipPercentage}
+          onChange={setTipPercentage}
+          customTip={customTip}
+          onCustomTipChange={setCustomTip}
+        />
+        <PeopleInput
+          value={people}
+          onChange={setPeople}
+        />
+        <ResultDisplay
+          tipAmount={tipAmount}
+          totalPerPerson={totalPerPerson}
+        />
+        <ResetButton
+          onClick={handleReset}
+        />
+      </div>
     </div>
   );
 }
