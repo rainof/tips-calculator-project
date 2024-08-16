@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Space Mono';
+    src: url('./assets/fonts/SpaceMono-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
 :root {
     --strong-cyan: hsl(172, 67%, 45%);
 
