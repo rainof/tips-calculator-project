@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 
-function TipSelector({ selectedTip, onChange }) {
+function TipSelector({ selectedTip, onChange, customTip, onCustomTipChange }) {
     const tipOptions = [5, 10, 15, 25, 50];
-    const [customTip, setCustomTip] = useState('');
 
     const handleTipSelect = (tip) => {
-        setCustomTip('');
+        onCustomTipChange('');
         onChange(tip);
     };
 
     const handleCustomTip = (e) => {
         const value = parseFloat(e.target.value);
-        setCustomTip(e.target.value);
+        onCustomTipChange(e.target.value);
         onChange(value || 0);
     };
 
