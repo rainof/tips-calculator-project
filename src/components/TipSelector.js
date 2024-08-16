@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../styles/TipSelector.scss'
 
 function TipSelector({ selectedTip, onChange, customTip, onCustomTipChange }) {
     const tipOptions = [5, 10, 15, 25, 50];
@@ -16,9 +17,12 @@ function TipSelector({ selectedTip, onChange, customTip, onCustomTipChange }) {
 
     return (
         <div className='tip-container'>
-            <label>Select Tip %</label>
-            <div className='tip-btn'>
-                {tipOptions.map((tip) => (
+            <div className='select-tip'>
+                <label>Select Tip %</label>
+            </div>
+            <div className='button-container'>
+                <div className='grid-item'>
+                    {tipOptions.slice(0, 1).map((tip) => (
                     <button
                         key={tip}
                         className={selectedTip === tip ? 'selected-tip' : ''}
@@ -26,13 +30,60 @@ function TipSelector({ selectedTip, onChange, customTip, onCustomTipChange }) {
                     >
                         {tip}%
                     </button>
-                ))}
-                <input
-                    type='number'
-                    value={customTip}
-                    onChange={handleCustomTip}
-                    placeholder='Custom'
-                />
+                    ))}
+                </div>
+                <div className='grid-item'>
+                    {tipOptions.slice(1, 2).map((tip) => (
+                    <button
+                        key={tip}
+                        className={selectedTip === tip ? 'selected-tip' : ''}
+                        onClick={() => handleTipSelect(tip)}
+                    >
+                        {tip}%
+                    </button>
+                    ))}
+                </div>
+                <div className='grid-item'>
+                    {tipOptions.slice(2, 3).map((tip) => (
+                    <button
+                        key={tip}
+                        className={selectedTip === tip ? 'selected-tip' : ''}
+                        onClick={() => handleTipSelect(tip)}
+                    >
+                        {tip}%
+                    </button>
+                    ))}
+                </div>
+                <div className='grid-item'>
+                    {tipOptions.slice(3, 4).map((tip) => (
+                    <button
+                        key={tip}
+                        className={selectedTip === tip ? 'selected-tip' : ''}
+                        onClick={() => handleTipSelect(tip)}
+                    >
+                        {tip}%
+                    </button>
+                    ))}
+                </div>
+                <div className='grid-item'>
+                    {tipOptions.slice(4).map((tip) => (
+                    <button
+                        key={tip}
+                        className={selectedTip === tip ? 'selected-tip' : ''}
+                        onClick={() => handleTipSelect(tip)}
+                    >
+                        {tip}%
+                    </button>
+                    ))}
+                </div>
+                <div className='grid-item grid-input'>
+                    <input
+                        type='number'
+                        value={customTip}
+                        onChange={handleCustomTip}
+                        placeholder='Custom'
+                    />
+                </div>
             </div>
         </div>
     )
