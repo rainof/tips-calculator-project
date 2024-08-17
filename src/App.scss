@@ -5,7 +5,7 @@
 
     .App {
         width: 100%;
-        height: 100%;
+        height: auto;
         background-color: var(--light-grayish-cyan);
         display: flex;
         flex-direction: column;
@@ -20,17 +20,29 @@
         .calculator-container {
             padding-bottom: 32px;
             height: 100%;
-            border-radius: 25px;
+            border-radius: 25px 25px 0 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             background-color: var(--white);
 
-            .display-container {
+            .bill-section {
+                width: 100%;;
+            }
+
+            .tip-section {
+                width: 100%;
+            }
+
+            .people-section {
+                width: 100%;
+            }
+
+            .display-section {
                 background-color: var(--very-dark-cyan);
                 border-radius: 15px;
-                width: 327px;
+                width: 87.2vw;
             }
         }
     }

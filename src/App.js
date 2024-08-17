@@ -37,21 +37,27 @@ function App() {
         <img src={logo} alt='logo' />
       </div>
       <div className='calculator-container'>
-        <BillInput
-          value={bill}
-          onChange={setBill}
-        />
-        <TipSelector
-          selectedTip={tipPercentage}
-          onChange={setTipPercentage}
-          customTip={customTip}
-          onCustomTipChange={setCustomTip}
-        />
-        <PeopleInput
-          value={people}
-          onChange={setPeople}
-        />
-        <div className='display-container'>
+        <div className='bill-section'>
+          <BillInput
+            value={bill}
+            onChange={setBill}
+          />
+        </div>
+        <div className='tip-section'>
+          <TipSelector
+            selectedTip={tipPercentage}
+            onChange={setTipPercentage}
+            customTip={customTip}
+            onCustomTipChange={setCustomTip}
+          />
+        </div>
+        <div className='people-section'>
+          <PeopleInput
+            value={people}
+            onChange={setPeople}
+          />
+        </div>
+        <div className='display-section'>
           <ResultDisplay
             tipAmount={tipAmount}
             totalPerPerson={totalPerPerson}
