@@ -21,7 +21,7 @@ function BillInput({ value, onChange }) {
 
     return(
         <div className='bill-container'>
-            <div className='label'>
+            <div className='bill-label'>
                 <label htmlFor='bill'>Bill</label>
             </div>
             <div className='bill-input'>

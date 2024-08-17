@@ -5,7 +5,7 @@
     flex-direction: column;
     padding: 32px;
 
-    .label {
+    .bill-label {
         margin-bottom: 6px;
         font-size: 16px;
         color: var(--dark-grayish-cyan);
@@ -19,7 +19,7 @@
         background-color: var(--very-light-graying-cyan);
 
         .dollar-img {
-            padding-left: 19.26px;
+            padding: 0 19.26px;
         }
 
         #bill {
@@ -31,6 +31,18 @@
             font-size: 24px;
             text-align: right;
             padding-right: 17.48px;
+        }
+
+        #bill:focus {
+            color: var(--very-dark-cyan);
+        }
+
+        #bill:not(:focus) {
+            color: var(--grayish-cyan);
+        }
+
+        #bill::placeholder {
+            color: var(--very-light-graying-cyan);
         }
     }
 }
