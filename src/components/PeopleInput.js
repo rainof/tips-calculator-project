@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import personIcon from '../assets/images/icon-person.svg';
+import '../styles/PeopleInput.scss';
 
 function PeopleInput({ value, onChange }) {
     const [isPlaceHolderVisible, setIsPlaceHolderVisible] = useState(true);
@@ -19,16 +21,21 @@ function PeopleInput({ value, onChange }) {
 
     return (
         <div className='people-container'>
-            <label htmlFor='people'>Number of People</label>
-            <input
-                type='number'
-                id='people'
-                value={value}
-                onFocus={handleFocus}
-                onBlur={handleBlur}
-                onChange={(e) => onChange(parseInt(e.target.value) || '')}
-                placeholder='0'
-            />
+            <div className='people-label'>
+                <label htmlFor='people'>Number of People</label>
+            </div>
+            <div className='people-input'>
+                <img className='person-img' src={personIcon} alt="person" />
+                <input
+                    type='number'
+                    id='people'
+                    value={value}
+                    onFocus={handleFocus}
+                    onBlur={handleBlur}
+                    onChange={(e) => onChange(parseInt(e.target.value) || '')}
+                    placeholder='0'
+                />
+            </div>
         </div>
     );
 }
