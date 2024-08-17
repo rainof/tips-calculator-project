@@ -7,6 +7,8 @@
         width: 100%;
         height: 100%;
         background-color: var(--light-grayish-cyan);
+        display: flex;
+        flex-direction: column;
 
         .logo-container {
             display: flex;
@@ -16,11 +18,20 @@
         }
 
         .calculator-container {
+            padding-bottom: 32px;
             height: 100%;
             border-radius: 25px;
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
             background-color: var(--white);
+
+            .display-container {
+                background-color: var(--very-dark-cyan);
+                border-radius: 15px;
+                width: 327px;
+            }
         }
     }
 }

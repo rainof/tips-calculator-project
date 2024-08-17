@@ -1,13 +1,16 @@
 import React from 'react';
+import '../styles/ResetButton.scss';
 
 function ResetButton({ onClick }) {
     return (
-        <button
-            className='reset-btn'
-            onClick={onClick}
-        >
-            Reset
-        </button>
+        <div className='reset-container'>
+            <button
+                id='reset'
+                onClick={onClick}
+            >
+                Reset
+            </button>
+        </div>
     );
 }
 

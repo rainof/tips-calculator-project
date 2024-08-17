@@ -51,13 +51,15 @@ function App() {
           value={people}
           onChange={setPeople}
         />
-        <ResultDisplay
-          tipAmount={tipAmount}
-          totalPerPerson={totalPerPerson}
-        />
-        <ResetButton
-          onClick={handleReset}
-        />
+        <div className='display-container'>
+          <ResultDisplay
+            tipAmount={tipAmount}
+            totalPerPerson={totalPerPerson}
+          />
+          <ResetButton
+            onClick={handleReset}
+          />
+        </div>
       </div>
     </div>
   );
