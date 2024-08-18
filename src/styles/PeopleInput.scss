@@ -112,6 +112,242 @@
     }
 }
 
+///////////////////////////////
+
+@media (min-width: 500px) and (max-width: 699px) {
+    .people-container {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 0 35px;
+        margin-top: 25px;
+
+        .people-label {
+            display: flex;
+            margin-bottom: 6px;
+            font-size: 16px;
+            color: var(--dark-grayish-cyan);
+
+            .people-title {
+                width: 100%;
+            }
+
+            .error-message {
+                width: 100%;
+                color: var(--coral-pink);
+                text-align: right;
+            }
+        }
+
+        .people-input {
+            display: flex;
+            align-items: center;
+            width: auto;
+            height: 48px;
+            background-color: var(--very-light-graying-cyan);
+            border: var(--white) 2px solid;
+            border-radius: 5px;
+            cursor: pointer;
+
+            .person-img {
+                padding: 0 19.26px;
+            }
+
+            #people {
+                width: 100%;
+                border-style: none;
+                background-color: var(--very-light-graying-cyan);
+                color: var(--very-dark-cyan);
+                font-family: 'Space Mono', sans-serif;
+                font-size: 24px;
+                text-align: right;
+                padding-right: 17.48px;
+                cursor: pointer;
+            }
+
+            #people:focus {
+                color: var(--very-dark-cyan);
+                outline: none;
+                border-color: transparent;
+            }
+
+            #people:not(:focus) {
+                color: var(--grayish-cyan);
+            }
+
+            #people::placeholder {
+                color: var(--very-light-graying-cyan);
+            }
+
+            #people::-webkit-outer-spin-button,
+            #people::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+
+        .people-input:hover {
+            border: var(--strong-cyan) 2px solid;
+            border-radius: 5px;
+        }
+
+        .error-border {
+            display: flex;
+            align-items: center;
+            width: auto;
+            height: 48px;
+            background-color: var(--very-light-graying-cyan);
+            border: var(--soft-coral-pink) 2px solid;
+            border-radius: 5px;
+
+            .person-img {
+                padding: 0 19.26px;
+            }
+
+            #people {
+                width: 100%;
+                border-style: none;
+                background-color: var(--very-light-graying-cyan);
+                color: var(--very-dark-cyan);
+                font-family: 'Space Mono', sans-serif;
+                font-size: 24px;
+                text-align: right;
+                padding-right: 17.48px;
+            }
+
+            #people:focus {
+                color: var(--very-dark-cyan);
+            }
+
+            #people:not(:focus) {
+                color: var(--grayish-cyan);
+            }
+
+            #people::placeholder {
+                color: var(--very-light-graying-cyan);
+            }
+        }
+    }
+}
+
+///////////////////////////////
+
+@media (min-width: 700px) and (max-width: 920px) {
+    .people-container {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 0 35px;
+        margin-top: 25px;
+
+        .people-label {
+            display: flex;
+            margin-bottom: 6px;
+            font-size: 16px;
+            color: var(--dark-grayish-cyan);
+
+            .people-title {
+                width: 100%;
+            }
+
+            .error-message {
+                width: 100%;
+                color: var(--coral-pink);
+                text-align: right;
+            }
+        }
+
+        .people-input {
+            display: flex;
+            align-items: center;
+            width: auto;
+            height: 48px;
+            background-color: var(--very-light-graying-cyan);
+            border: var(--white) 2px solid;
+            border-radius: 5px;
+            cursor: pointer;
+
+            .person-img {
+                padding: 0 19.26px;
+            }
+
+            #people {
+                width: 100%;
+                border-style: none;
+                background-color: var(--very-light-graying-cyan);
+                color: var(--very-dark-cyan);
+                font-family: 'Space Mono', sans-serif;
+                font-size: 24px;
+                text-align: right;
+                padding-right: 17.48px;
+                cursor: pointer;
+            }
+
+            #people:focus {
+                color: var(--very-dark-cyan);
+                outline: none;
+                border-color: transparent;
+            }
+
+            #people:not(:focus) {
+                color: var(--grayish-cyan);
+            }
+
+            #people::placeholder {
+                color: var(--very-light-graying-cyan);
+            }
+
+            #people::-webkit-outer-spin-button,
+            #people::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+
+        .people-input:hover {
+            border: var(--strong-cyan) 2px solid;
+            border-radius: 5px;
+        }
+
+        .error-border {
+            display: flex;
+            align-items: center;
+            width: auto;
+            height: 48px;
+            background-color: var(--very-light-graying-cyan);
+            border: var(--soft-coral-pink) 2px solid;
+            border-radius: 5px;
+
+            .person-img {
+                padding: 0 19.26px;
+            }
+
+            #people {
+                width: 100%;
+                border-style: none;
+                background-color: var(--very-light-graying-cyan);
+                color: var(--very-dark-cyan);
+                font-family: 'Space Mono', sans-serif;
+                font-size: 24px;
+                text-align: right;
+                padding-right: 17.48px;
+            }
+
+            #people:focus {
+                color: var(--very-dark-cyan);
+            }
+
+            #people:not(:focus) {
+                color: var(--grayish-cyan);
+            }
+
+            #people::placeholder {
+                color: var(--very-light-graying-cyan);
+            }
+        }
+    }
+}
+
+///////////////////////////////
+
 @media (min-width: 920px) {
     .people-container {
         display: flex;

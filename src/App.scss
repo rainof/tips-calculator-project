@@ -55,6 +55,142 @@
     }
 }
 
+///////////////////////////////
+
+@media (min-width: 500px) and (max-width: 699px) {
+    #root {
+        height: 100vh;
+        background-color: var(--light-grayish-cyan);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .App {
+            width: 98vw;
+            height: auto;
+            background-color: var(--light-grayish-cyan);
+            display: flex;
+            flex-direction: column;
+
+            .logo-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0 0 64.36px 0;
+            }
+
+            .calculator-container {
+                padding: 0;
+                height: 100%;
+                border-radius: 25px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                background-color: var(--white);
+
+                .calculate-section{
+
+                    .bill-section {
+                        width: 100%;
+                    }
+
+                    .tip-section {
+                        width: 100%;
+                    }
+
+                    .people-section {
+                        width: 100%;
+                    }
+                }
+
+                .display-section {
+                    width: 180px;
+                    margin: 32px 32px 32px 0;
+                    background-color: var(--very-dark-cyan);
+                    border-radius: 15px;
+
+                    .inner {
+                        margin: 35px 30px;
+                        width: auto;
+                        background-color: var(--very-dark-cyan);
+                    }
+                }
+            }
+        }
+    }
+}
+
+///////////////////////////////
+
+@media (min-width: 700px) and (max-width: 920px) {
+    #root {
+        height: 100vh;
+        background-color: var(--light-grayish-cyan);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .App {
+            width: 98vw;
+            height: auto;
+            background-color: var(--light-grayish-cyan);
+            display: flex;
+            flex-direction: column;
+
+            .logo-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0 0 64.36px 0;
+            }
+
+            .calculator-container {
+                padding: 0;
+                height: 100%;
+                border-radius: 25px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                background-color: var(--white);
+
+                .calculate-section{
+
+                    .bill-section {
+                        width: 100%;
+                    }
+
+                    .tip-section {
+                        width: 100%;
+                    }
+
+                    .people-section {
+                        width: 100%;
+                    }
+                }
+
+                .display-section {
+                    width: 600px;
+                    margin: 32px 32px 32px 0;
+                    background-color: var(--very-dark-cyan);
+                    border-radius: 15px;
+
+                    .inner {
+                        margin: 35px 30px;
+                        width: auto;
+                        background-color: var(--very-dark-cyan);
+                    }
+                }
+            }
+        }
+    }
+}
+
+///////////////////////////////
+
 @media (min-width: 920px) {
     #root {
         height: 100vh;
