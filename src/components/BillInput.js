@@ -10,14 +10,14 @@ function BillInput({ value, onChange }) {
             onChange('');
             setIsPlaceHolderVisible(false);
         }
-    }
+    };
 
     const handleBlur = () => {
         if (value === '') {
             onChange(0);
             setIsPlaceHolderVisible(true);
         }
-    }
+    };
 
     return(
         <div className='bill-container'>
@@ -25,7 +25,7 @@ function BillInput({ value, onChange }) {
                 <label htmlFor='bill'>Bill</label>
             </div>
             <div className='bill-input'>
-                <img className='dollar-img' src={dollarIcon} alt="dollar" />
+                <img className='dollar-img' src={dollarIcon} alt='dollar' />
                 <input
                     type='number'
                     id='bill'

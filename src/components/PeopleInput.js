@@ -30,7 +30,7 @@ function PeopleInput({ value, onChange, showError }) {
                 )}
             </div>
             <div className={showError ? 'error-border' : 'people-input'}>
-                <img className='person-img' src={personIcon} alt="person" />
+                <img className='person-img' src={personIcon} alt='person' />
                 <input
                     type='number'
                     id='people'

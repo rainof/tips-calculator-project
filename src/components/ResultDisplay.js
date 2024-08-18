@@ -25,7 +25,7 @@ function ResultDisplay({ tipAmount, totalPerPerson }) {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default ResultDisplay;

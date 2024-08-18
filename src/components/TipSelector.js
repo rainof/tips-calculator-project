@@ -86,7 +86,7 @@ function TipSelector({ selectedTip, onChange, customTip, onCustomTipChange }) {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default TipSelector;
