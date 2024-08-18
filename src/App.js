@@ -14,9 +14,9 @@ function App() {
   const [customTip, setCustomTip] = useState('');
 
   const handleReset = () => {
-    setBill('');
+    setBill(0);
     setTipPercentage(0);
-    setPeople('');
+    setPeople(0);
     setCustomTip('');
   }
 

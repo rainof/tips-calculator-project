@@ -34,6 +34,9 @@ function BillInput({ value, onChange }) {
                     onBlur={handleBlur}
                     onChange={(e) => onChange(parseFloat(e.target.value) || '')}
                     placeholder='0'
+                    style={{
+                        color: value === 0 ? 'var(--grayish-cyan)' : 'var(--very-dark-cyan)'
+                    }}
                 />
             </div>
         </div>
