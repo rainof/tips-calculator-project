@@ -63,3 +63,69 @@
         border-radius: 5px;
     }
 }
+
+@media (min-width: 920px) {
+    .bill-container {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 0 48px;
+
+        .bill-label {
+            margin-bottom: 6px;
+            font-size: 16px;
+            color: var(--dark-grayish-cyan);
+        }
+
+        .bill-input {
+            display: flex;
+            align-items: center;
+            width: 379px;
+            height: 48px;
+            background-color: var(--very-light-graying-cyan);
+            border: var(--white) 2px solid;
+            border-radius: 5px;
+            cursor: pointer;
+
+            .dollar-img {
+                padding: 0 19.26px;
+            }
+
+            #bill {
+                width: 100%;
+                border-style: none;
+                background-color: var(--very-light-graying-cyan);
+                color: var(--very-dark-cyan);
+                font-family: 'Space Mono', sans-serif;
+                font-size: 24px;
+                text-align: right;
+                padding-right: 17.48px;
+                cursor: pointer;
+            }
+
+            #bill:focus {
+                color: var(--very-dark-cyan);
+                outline: none;
+                border-color: transparent;
+            }
+
+            #bill:not(:focus) {
+                color: var(--grayish-cyan);
+            }
+
+            #bill::placeholder {
+                color: var(--very-light-graying-cyan);
+            }
+
+            #bill::-webkit-outer-spin-button,
+            #bill::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+
+        .bill-input:hover {
+            border: var(--strong-cyan) 2px solid;
+            border-radius: 5px;
+        }
+    }
+}

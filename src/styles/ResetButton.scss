@@ -23,3 +23,29 @@
         background-color: var(--soft-mint-green);
     }
 }
+
+@media (min-width: 920px) {
+    .reset-container {
+        padding: 133px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        #reset {
+            height: 48px;
+            width: 100%;
+            border-style: none;
+            background-color: var(--strong-cyan);
+            color: var(--very-dark-cyan);
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: 700;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #reset:hover {
+            background-color: var(--soft-mint-green);
+        }
+    }
+}
