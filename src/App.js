@@ -12,13 +12,15 @@ function App() {
   const [tipPercentage, setTipPercentage] = useState(0);
   const [people, setPeople] = useState(0);
   const [customTip, setCustomTip] = useState('');
+  const [showPeopleError, setShowPeopleError] = useState(false);
 
   const handleReset = () => {
     setBill(0);
     setTipPercentage(0);
     setPeople(0);
     setCustomTip('');
-  }
+    setShowPeopleError(false);
+  };
 
   const calculateTip = () => {
     if (people > 0) {
@@ -27,9 +29,19 @@ function App() {
       return { tipAmount, totalPerPerson };
     }
     return { tipAmount: 0, totalPerPerson: 0};
-  }
+  };
 
   const { tipAmount, totalPerPerson } = calculateTip();
+
+  const handleBillChange = (value) => {
+    setBill(value);
+    setShowPeopleError(value > 0 && people <= 0);
+  };
+
+  const handlePeopleChange = (value) => {
+    setPeople(value);
+    setShowPeopleError(bill > 0 && value <= 0);
+  };
 
   return (
     <div className='App'>
@@ -40,7 +52,7 @@ function App() {
         <div className='bill-section'>
           <BillInput
             value={bill}
-            onChange={setBill}
+            onChange={handleBillChange}
           />
         </div>
         <div className='tip-section'>
@@ -54,7 +66,8 @@ function App() {
         <div className='people-section'>
           <PeopleInput
             value={people}
-            onChange={setPeople}
+            onChange={handlePeopleChange}
+            showError={showPeopleError}
           />
         </div>
         <div className='display-section'>
