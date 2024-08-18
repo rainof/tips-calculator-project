@@ -1,6 +1,6 @@
 import './App.scss';
 import logo from './assets/images/logo.svg';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import BillInput from './components/BillInput';
 import TipSelector from './components/TipSelector';
 import PeopleInput from './components/PeopleInput';
@@ -13,6 +13,15 @@ function App() {
   const [people, setPeople] = useState(0);
   const [customTip, setCustomTip] = useState('');
   const [showPeopleError, setShowPeopleError] = useState(false);
+  const [resetButtonEnabled, setResetButtonEnabled] = useState(false);
+
+  useEffect(() => {
+    if (bill > 0 || people > 0 || tipPercentage > 0 || customTip !== '') {
+      setResetButtonEnabled(true);
+    } else {
+      setResetButtonEnabled(false);
+    }
+  }, [bill, tipPercentage, people, customTip]);
 
   const handleReset = () => {
     setBill(0);
@@ -20,6 +29,7 @@ function App() {
     setPeople(0);
     setCustomTip('');
     setShowPeopleError(false);
+    setResetButtonEnabled(false);
   };
 
   const calculateTip = () => {
@@ -80,6 +90,7 @@ function App() {
             />
             <ResetButton
               onClick={handleReset}
+              enabled={resetButtonEnabled}
             />
           </div>
         </div>
