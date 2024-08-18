@@ -27,22 +27,29 @@
             align-items: center;
             background-color: var(--white);
 
-            .bill-section {
-                width: 100%;;
-            }
+            .calculate-section{
 
-            .tip-section {
-                width: 100%;
-            }
+                .bill-section {
+                    width: 100%;;
+                }
 
-            .people-section {
-                width: 100%;
+                .tip-section {
+                    width: 100%;
+                }
+
+                .people-section {
+                    width: 100%;
+                }
             }
 
             .display-section {
-                background-color: var(--very-dark-cyan);
-                border-radius: 15px;
-                width: 87.2vw;
+                width: 100%;
+
+                .inner {
+                    margin: 0 24px;
+                    background-color: var(--very-dark-cyan);
+                    border-radius: 15px;
+                }
             }
         }
     }

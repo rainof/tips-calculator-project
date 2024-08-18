@@ -49,35 +49,39 @@ function App() {
         <img src={logo} alt='logo' />
       </div>
       <div className='calculator-container'>
-        <div className='bill-section'>
-          <BillInput
-            value={bill}
-            onChange={handleBillChange}
-          />
-        </div>
-        <div className='tip-section'>
-          <TipSelector
-            selectedTip={tipPercentage}
-            onChange={setTipPercentage}
-            customTip={customTip}
-            onCustomTipChange={setCustomTip}
-          />
-        </div>
-        <div className='people-section'>
-          <PeopleInput
-            value={people}
-            onChange={handlePeopleChange}
-            showError={showPeopleError}
-          />
+        <div className='calculate-section'>
+          <div className='bill-section'>
+            <BillInput
+              value={bill}
+              onChange={handleBillChange}
+            />
+          </div>
+          <div className='tip-section'>
+            <TipSelector
+              selectedTip={tipPercentage}
+              onChange={setTipPercentage}
+              customTip={customTip}
+              onCustomTipChange={setCustomTip}
+            />
+          </div>
+          <div className='people-section'>
+            <PeopleInput
+              value={people}
+              onChange={handlePeopleChange}
+              showError={showPeopleError}
+            />
+          </div>
         </div>
         <div className='display-section'>
-          <ResultDisplay
-            tipAmount={tipAmount}
-            totalPerPerson={totalPerPerson}
-          />
-          <ResetButton
-            onClick={handleReset}
-          />
+          <div className='inner'>
+            <ResultDisplay
+              tipAmount={tipAmount}
+              totalPerPerson={totalPerPerson}
+            />
+            <ResetButton
+              onClick={handleReset}
+            />
+          </div>
         </div>
       </div>
     </div>
